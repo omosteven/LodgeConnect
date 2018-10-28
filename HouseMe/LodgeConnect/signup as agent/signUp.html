@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>SignUp as User</title>
+    <base link =" " />
+    <link rel="stylesheet" type="text/css" href="signUp.css" />
+</head>
+<body>
+    <img src="logo.jpg" />
+    <form action="signuplogin.php">
+        <div class="Personal">
+            <h1>Required Details </h1>
+            Asteric fields must be filled<br/>
+
+            <label>First Name(*) </label><br /><input type="text" maxlength="30" name=" first name " value=" " title="firstname" required /><br />
+            <label>Last Name(*) </label><br /><input type="text" maxlength=" 30" name="last name" value=" " title="last name" required/><br />
+            <label>E-mail(*) </label><br /><input type="email" name="email" value=" " placeholder = " e.g you@gmail.com" required/><br />
+            <label>Password(*) </label><br /><input type="password" name="password" placeholder=" password" required/><br />
+            <label>Confirm Password(*) </label><br /><input type="password" name="confirmpassword" placeholder=" re-enter password" required /><br/>
+            <label>Address(*) </label><br /><textarea placeholder="Your address" required></textarea>
+            <label>Website</label><br /><input type="url" name="website" value="" placeholder=" https://www.lodgeconnect.com" />
+            
+
+        </div>
+        <div class="confidential">
+            <label>LinkedIn URL</label><br /><input type="url" name="linkedin" value="" />
+            <label>State(*)</label><br /><input type="text" name="state" value=" " title="your state" required /><br />
+            <label>City(*)</label><br /><input type="text" name="city" value=" " title="your city" required />
+            <label>Country(*)</label><br /><input type="text" name="country" value=" " title="your country" required /><br />
+            <label>Phone Number(e.g 0901-345-9876)(*) </label> <br /> <input type="tel" name="telephone number" value=" " pattern=" [0-9]{4}-[0-9]{3}-[0-9]{4}" title="e.g 0801-123-4567" required /></br>   
+            <label>Name of Next of Kin </label><br /><input type="text" maxlength="30" name="next of kin" value=" " required/><br/>
+            <label>Address of Next of Kin </label><br /><input type="text" name="address" value=" " required/></br>
+            <label>E-mail of Next of Kin </label><br /><input type="email" name="email" value=" " placeholder = " e.g you@gmail.com" required/><br/>
+            <label>Relationship </label><br /><input type="text" name="relationship" value=" " required/><br/>
+            
+
+        </div>
+        <div class="terms">
+            <details>
+                <summary>Terms and Conditions(you have to agree before you can sign up)</summary>
+                <h4>General</h4>
+                <p>All information filled on the form must be true and correct as incorrect information when discovered and reported will lead to account blockage.</p>
+                <h4>For Agents</h4>
+                <p>Never give anybody address of the houses you took pictures of. When posting pictures of hostels available, the following should be properly snapped</p>
+                <ul>
+                    <li>Front view</li>
+                    <li>Back view</li>
+                    <li>Size view</li>
+                    <li>Interior decoration</li>
+                    <li>Environment capture</li>
+                </ul>
+                You can always contact us for provision of our professional photographer.
+                <h4>For customers</h4>
+                <p>You are to see the services for yourself before payment. Collect receipt immediately after payment.</p>
+                <p>
+                    <b>N:B</b> Lodge Connect cannot be held responsible for any form of losses<br />
+                    Always note that your privacy is secured with us as we would not expose your contact to any.<br />
+                    For any assistance and problem always use the feedback to contact us.
+                </p>
+                <input type="checkbox" name=" agree" required/> I agree to the T&C<br />
+            </details>
+        </div>
+        <div class="footer">
+            <input type="submit" name="submit" value="Sign Up" class="signup" />&nbsp; &nbsp; <input type="reset" name=" reset" value="Reset details" class="signup" />
+        </div>
+    </form>
+</body>
+</html>

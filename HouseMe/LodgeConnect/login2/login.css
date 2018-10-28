@@ -1,0 +1,51 @@
+body {
+    float: right;
+    margin: 10em;
+}
+
+input[type=password] {
+    border-bottom-color: #000000;
+    box-sizing: border-box;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    height: 5em;
+    padding-left: 25%;
+    background-color: white;
+    background-image: url('password.jpg');
+    background-position: 3px 50%;
+    background-repeat: no-repeat;
+    font-size: 1.5em;
+}
+
+    input[type=password]:focus {
+        border-bottom-color: #000000;
+    }
+
+
+input[type=email] {
+    border-bottom-color: #000000;
+    box-sizing: border-box;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    height: 5em;
+    padding-left: 25%;
+    background-color: white;
+    background-image: url('email.jpg');
+    background-position: 3px 50%;
+    background-repeat: no-repeat;
+    font-size: 1.5em;
+}
+
+    input[type=email]:focus {
+        border-bottom-color: #000000;
+    }
+
+input[type=submit] {
+    height: 5em;
+    font-size: 1.5em;
+    width: 10em;
+    margin-top: 10px;
+    float: right;
+}
