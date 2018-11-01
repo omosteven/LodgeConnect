@@ -9,6 +9,48 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/signup.css">
     <title>LodgeConnect -Signup</title>
+    <script>
+    
+      function validatePass()
+          {
+    var pass1 = document.getElementById('inputPassword1');
+    var message1 = document.getElementById('error-nwl');
+    
+    var goodColor = "white";
+    var badColor = "darkred";
+
+    
+    if(pass1.value.length > 7){
+        pass1.style.backgroundColor = goodColor;
+        message1.style.color = goodColor;
+        message1.innerHTML = "Password length Ok!";
+    }
+    else{
+        pass1.style.backgroundColor = badColor;
+        message1.style.color = badColor;
+        message1.innerHTML = "Must be at least 8 characters!";
+    }
+}
+function matchPass(){
+  var pass1 = document.getElementById('inputPassword1');
+    var pass2 = document.getElementById('inputPassword2');
+    var message1 = document.getElementById('error-nwl');
+
+    var goodColor = "white";
+    var badColor = "darkred";
+
+    if(pass1.value == pass2.value){
+        pass2.style.backgroundColor = goodColor;
+        message1.style.color = goodColor;
+        message1.innerHTML = "";
+      }
+    else{
+        pass2.style.backgroundColor = badColor;
+        message1.style.color = badColor;
+        message1.innerHTML = "These passwords don't match";
+    }
+  } 
+    </script>
   </head>
   <body class="text-center">
     <div class="content">
@@ -19,13 +61,16 @@
             <span id="reauth-email" class="reauth-email"></span>
             <label for="inputEmail" class="sr-only">Email address</label>
             <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="Email">
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="Password">
-            <label for="inputPassword" class="sr-only">Confirm Password</label>
-            <input type="password" id="inputPassword" title ='Please re-enter your password here' class="form-control" placeholder="Confirm Password" required name="Confirm_Password">
+            <label for="inputPassword1" class="sr-only">Password</label>
+            <input type="password" id="inputPassword1" onkeyup="validatePass(); return false;" class="form-control" placeholder="Password" required name="Password">
+            <label for="inputPassword2" class="sr-only">Confirm Password</label>
+            <input type="password" id="inputPassword2"  onkeyup="matchPass(); return false;" title ='Please re-enter your password here' class="form-control" placeholder="Confirm Password" required name="Confirm_Password">
+            
           </div>
+          <div id="error-nwl"></div>
       <button class="btn btn-lg btn-primary btn-block btn-signin" name="signup" type="submit">Sign up</button>
       </form>
+      
       <p class="mt-5 mb-3 text-white">&copy; LodgeConnect, 2018.</p>
     </div>
     <!-- Optional JavaScript -->
