@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>LodgeConnect-Feedback</title>
+    <meta charset="UTF-8" lang="EN-US">
+    <link rel="shortcut icon" href="img/logo.jpg">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/feedback.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+        function thanks() {
+            window.alert("Thanks for your visit!");
+        }
+    </script>
+</head>
+
+<body onload="thanks()">
+
+    <div class="header">
+        <div class="logo">
+            <img src="img/logo.jpg">
+        </div>
+        <div class="motto">
+            <label>Connect easily...</label>
+        </div>
+    </div>
+    <div class="aim" style="width:100%">
+        <!-- <img src=""> -->
+        <h2>Feed us back</h2>
+        <p> Let us improve</p>
+    </div>
+    <div class="feedback">
+        <form action="" method="POST">
+            <div class="input-field modify">
+                <input id="name" type="text" class="validate" required>
+                <label for="name">Name*</label>
+            </div>
+            <div class="input-field modify">
+                <input id="email" type="email" class="validate" required>
+                <label for="email">E-mail*</label>
+            </div>
+            <div class="input-field modify">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Your Message*</label>
+            </div>
+            <div class="medium">
+                <h5>How did you get to know us?</h5>
+                <p>
+                    <input name="medium" type="checkbox" id="medium1" />
+                    <label for="medium1">Whatsaap Status</label>
+                </p>
+                <p>
+                    <input name="medium" type="checkbox" id="medium2" />
+                    <label for="medium2">Facebook</label>
+                </p>
+                <p>
+                    <input name="medium" type="checkbox" id="medium3" />
+                    <label for="medium3">Blog</label>
+                </p>
+                <p>
+                    <input name="medium" type="checkbox" id="medium4" />
+                    <label for="medium4">Radio station</label>
+                </p>
+                <p>
+                    <input name="medium" type="checkbox" id="medium5" />
+                    <label for="medium5">others</label>
+                </p>
+            </div>
+            <div class="rate">
+                <h5>Please rate us on a scale of 100%</h5>
+                <p>
+                    <input name="rate" type="radio" id="rate1" />
+                    <label for="rate1">20%</label>
+                </p>
+                <p>
+                    <input name="rate" type="radio" id="rate2" />
+                    <label for="rate2">40%</label>
+                </p>
+                <p>
+                    <input name="rate" type="radio" id="rate3" />
+                    <label for="rate3">60%</label>
+                </p>
+                <p>
+                    <input name="rate" type="radio" id="rate4" />
+                    <label for="rate4">80%</label>
+                </p>
+                <p>
+                    <input name="rate" type="radio" id="rate5" />
+                    <label for="rate5">100%</label>
+                </p>
+            </div>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </div>
+    <div class="imgrent">
+        <img src="img/house.png">
+    </div>
+    <div class="footer">
+        <h5 id="copyright">&copyLodgeConnect </h5>
+        <div class="icons">
+            <a href=""><img src="img/facebook.png"></a>
+            <a href=""><img src="img/instagram.png"></a>
+            <a href=""><img src="img/google.png"></a>
+            <a href=""><img src="img/twitter.png"></a>
+        </div>
+    </div>
+    <script>
+        var copyright = document.getElementById('copyright');
+        var year = new Date().getFullYear();
+        copyright.innerHTML += year;
+    </script>
+    <!--js script for form live-->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
