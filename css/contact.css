@@ -142,6 +142,7 @@
         }
         
         div.FAQ {
+            visibility : none;
             width: 40%;
             float: right;
             padding: 1em;
