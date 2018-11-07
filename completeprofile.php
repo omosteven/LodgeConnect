@@ -50,7 +50,7 @@ session_start();
                 <label for="last_name">Last Name</label>
             </div>
             <div class="input-field modify">
-                <input id="state" type="text" name='city-state-nation' class="validate" required>
+                <input id="state" type="text" name='city-state-nation' value=<?php include('GeoNavigation/geolocation.php');echo userLocation('41.203.72.62')?> class="validate" required>
                 <label for="City-State-Nationality">City-State-Nationlity</label>
             </div>
             <div class="input-field modify">
@@ -58,7 +58,7 @@ session_start();
                 <label for="address">Address</label>
             </div>
             <div class="input-field modify">
-                <input id="contact" type="text" name='contact' class="validate" placeholder="eg +2347037048119" required>
+                <input id="contact" type="number" name='contact' class="validate" placeholder="eg +2347037048119" required>
                 <label for="contact">Telephone</label>
             </div>
             <div class="input-field modify">
