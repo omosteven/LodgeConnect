@@ -26,7 +26,7 @@ if(include('lodgeconnectDB.php'))   { //To import the Database connection file
                        header('Location:pageerrorhandler.php');
             }
         }   else    {
-                    header('Location:login.html');
+                    header('Location:index.php');
             }
     }   else    {
                 header('Location:pageerrorhandler.php');
