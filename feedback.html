@@ -19,7 +19,7 @@
 
     <div class="header">
         <div class="logo">
-            <img src="img/logo.jpg">
+            <a href='index.php' title='Go to Homepage'><img src="img/logo.jpg"></a>
         </div>
         <div class="motto">
             <label>Connect easily...</label>
@@ -31,66 +31,66 @@
         <p> Let us improve</p>
     </div>
     <div class="feedback">
-        <form action="" method="POST">
+        <form action="" method="POST" name='feedback'>
             <div class="input-field modify">
-                <input id="name" type="text" class="validate" required>
+                <input id="name" type="text" class="validate" name='fullName' required>
                 <label for="name">Name*</label>
             </div>
             <div class="input-field modify">
-                <input id="email" type="email" class="validate" required>
+                <input id="email" type="email" name='email' class="validate" placeholder='Contact Email Address' required>
                 <label for="email">E-mail*</label>
             </div>
             <div class="input-field modify">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Your Message*</label>
+                <textarea id="textarea1" name='FeedMsg' class="materialize-textarea" title='What will you like us to know about'></textarea>
+                <label for="textarea1">Feedback Message*</label>
             </div>
             <div class="medium">
                 <h5>How did you get to know us?</h5>
                 <p>
-                    <input name="medium" type="checkbox" id="medium1" />
-                    <label for="medium1">Whatsaap Status</label>
+                    <input name="medium" type="checkbox" id="medium1" name='w'/>
+                    <label for="medium1">Whatsaap</label>
                 </p>
                 <p>
-                    <input name="medium" type="checkbox" id="medium2" />
+                    <input name="medium" type="checkbox" id="medium2" name='f'/>
                     <label for="medium2">Facebook</label>
                 </p>
                 <p>
-                    <input name="medium" type="checkbox" id="medium3" />
+                    <input name="medium" type="checkbox" id="medium3" name='i'/>
                     <label for="medium3">Blog</label>
                 </p>
                 <p>
-                    <input name="medium" type="checkbox" id="medium4" />
+                    <input name="medium" type="checkbox" id="medium4" name='r'/>
                     <label for="medium4">Radio station</label>
                 </p>
                 <p>
-                    <input name="medium" type="checkbox" id="medium5" />
+                    <input name="medium" type="checkbox" id="medium5" name='o'/>
                     <label for="medium5">others</label>
                 </p>
             </div>
             <div class="rate">
-                <h5>Please rate us on a scale of 100%</h5>
+                <h5>Please rate our services on a scale of 100%</h5>
                 <p>
-                    <input name="rate" type="radio" id="rate1" />
+                    <input name="rate" type="radio" id="rate1" name='20'/>
                     <label for="rate1">20%</label>
                 </p>
                 <p>
-                    <input name="rate" type="radio" id="rate2" />
+                    <input name="rate" type="radio" id="rate2" name='40'/>
                     <label for="rate2">40%</label>
                 </p>
                 <p>
-                    <input name="rate" type="radio" id="rate3" />
+                    <input name="rate" type="radio" id="rate3" name='60'/>
                     <label for="rate3">60%</label>
                 </p>
                 <p>
-                    <input name="rate" type="radio" id="rate4" />
+                    <input name="rate" type="radio" id="rate4" name='80'/>
                     <label for="rate4">80%</label>
                 </p>
                 <p>
-                    <input name="rate" type="radio" id="rate5" />
+                    <input name="rate" type="radio" id="rate5" name='100'/>
                     <label for="rate5">100%</label>
                 </p>
             </div>
-            <input type="submit" value="Submit" id="submit">
+            <input type="submit" value="Submit" id="submit" name='feedback'>
         </form>
     </div>
     <div class="imgrent">
