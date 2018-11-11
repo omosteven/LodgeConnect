@@ -1,0 +1,156 @@
+
+/*********************Home.php CSS Styles*******************/
+/************************************************************/
+
+input[type=text] {
+    width: 25em;
+    float:right;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 100%;
+}
+/* Add a black background color to the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: white;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+    float: left;
+    color:red;
+    padding: 1px;
+    border: none;
+    margin-top: auto;
+    margin-left:1em;
+    margin-right: 0em;
+    font-size: 1.2em;
+}
+
+
+.border {
+    color: RGB(0,0,120);
+    background-color: RGB(0,0,70);
+    box-sizing: border-box;
+    width: 100%;
+    border: 5px solid RGB(0,0,70);
+    float: left;
+}
+a {
+    text-decoration:none;
+}
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: RGB(0,0,70); /*#333*/
+  font-family: Arial;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px; 
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+.dropdown .dropbtn {
+    font-size: 16px; 
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.profileimg {
+    width:0.5em; 
+    height:0.1em; 
+    float:left;
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: darkred;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: white;
+  background-color:RGB(10,0,0);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: red;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.cover {
+ color: white;
+ background-color: RGB(0,100,0);
+ box-sizing: border-box;
+ width: 25%;
+ height:10em;
+ border: 5px blue;
+ /*word-wrap: break-word;*/
+overflow-wrap: break-word;
+ margin-left:0.5em;
+ margin-top:1em;
+ float: left;
+}
+
+.bullelement{
+    font-size:0.9em;
+    margin-left:0.3em;
+    font-weight:bold;
+    color:white;
+  }
+/**************************End of Home.php Style Sheet Codes***************/
