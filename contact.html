@@ -13,7 +13,7 @@
 <body>
     <div class="header">
         <div class="logo">
-            <img src="img/logo.jpg">
+            <a href='index.php' title='Home'><img src="img/logo.jpg"></a>
         </div>
         <div class="motto">
             <label>Connect easily...</label>
@@ -26,12 +26,12 @@
     </div>
     <div class="textareaAndFeedback">
         <div class="textarea">
-            <form action="" method="POST">
+            <form action="contactfeedback.php" method="GET" name='contact'>
                 <div class="input-field modify">
-                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                    <label for="textarea1">Your Need?</label>
+                    <textarea id="textarea1" class="materialize-textarea" name='contactmsg' placeholder='What Request do you want from us?' required></textarea>
+                    <label for="textarea1">Your Query?</label>
                 </div>
-                <input type="submit">
+                <input type="submit" name='contact'>
             </form>
         </div>
         <div class="FAQ">
