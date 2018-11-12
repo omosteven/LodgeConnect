@@ -146,6 +146,8 @@
             width: 40%;
             float: right;
             padding: 1em;
+            color:rgb(210, 21, 70);
+            background-color:rgb(70,10,0);
             box-shadow: 2px 2px 4px 4px gray;
         }
         /* beginning of mobile view for textareaANdFeedback*/
