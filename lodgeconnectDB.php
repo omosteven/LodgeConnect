@@ -28,7 +28,7 @@ function DBCONNECTION() //create a function to connect to database
 }
 $x = DBCONNECTION();
 
-function CREATEUSERTABLE($Mysqli_database)
+function CREATEMEMBERSHIPTABLE($Mysqli_database)
 {  
     $table = "CREATE TABLE if not exists LodgeConnectMembers(
     id INT(6) AUTO_INCREMENT,
@@ -43,6 +43,14 @@ function CREATEUSERTABLE($Mysqli_database)
     ADDRESS VARCHAR(255) NULL, 
     GENDER VARCHAR(255) NULL, 
     WEBSITE VARCHAR(255) NULL,
+    CODE_VERIFY INT(255) NULL,
+    VERIFY_STATUS INT(1) NULL,
+    ONLINE_STATUS INT(1) NULL,
+    LAST_SEEN INT(255) NULL,
+    INSTITUTION VARCHAR(255) NULL,
+    ORG_NAME VARCHAR(255) NULL,
+    SELF_JOB VARCHAR(255) NULL,
+    PERSONALITY VARCHAR(255) NULL,
     PRIMARY KEY(id)
     )";
     if(mysqli_query($Mysqli_database,$table)) {
@@ -51,5 +59,27 @@ function CREATEUSERTABLE($Mysqli_database)
         return 'TABLE UNSUCCESSFULLY CREATED';
     }
 }
-CREATEUSERTABLE($Mysqli_database);
+CREATEMEMBERSHIPTABLE($Mysqli_database);
+function CREATEMESSAGETABLE($Mysqli_database)
+{
+    $table1 = "CREATE TABLE if not exists Messages(
+        id INT(6) AUTO_INCREMENT,
+        EMAIL VARCHAR(255) NOT NULL,
+        FULLNAME VARCHAR(255) NULL,
+        CONTACTEMAIL VARCHAR(255) NULL,
+        CONTACTMSG VARCHAR(255) NULL,
+        FEEDBACKMSG VARCHAR(255) NULL,
+        AWARENESS_MEDIUM VARCHAR(255) NULL,
+        RATE VARCHAR(255) NULL,
+        MSGTYPE VARCHAR(255) NOT NULL,
+        REPLIED INT(1) NULL,
+        PRIMARY KEY(id)
+        )";
+        if(mysqli_query($Mysqli_database,$table1)){
+            return 'TABLE SUCCESSFULLY CREATED FOR USER';
+        } else {
+            return 'TABLE UNSUCCESSFULLY CREATED';
+        }
+}
+CREATEMESSAGETABLE($Mysqli_database);
 ?>
