@@ -4,9 +4,14 @@ if(isset($_GET['contact'])){
     if(include('lodgeconnectDB.php')) {
         if($Mysqli_database){
             $sql = "INSERT INTO messages (FULLNAME,EMAIL,CONTACTEMAIL,CONTACTMSG,MSGTYPE)
-            VALUES('".$_GET[fullName]."','".$_GET[loggedEmail]."','".$_GET[email]."','".$_GET[contactmsg]."','CONTACT');";
+            VALUES('".$_GET[fullName]."','".$_SESSION[loggedEmail]."','".$_GET[email]."','".$_GET[contactmsg]."','CONTACT');";
             if(mysqli_query($Mysqli_database,$sql)) {
-                header('Location:contactresponse.html');
+                echo "<script type='text/javascript' src='js/cookies.js'></script>
+                <script>
+                setCookie('contactresponse','contact',1);
+                </script>";
+                
+                header('refresh:2,url=contact.html');
             } else    {
                 header('Location:pageerrorhandler.php');
             }
