@@ -1,0 +1,132 @@
+html,
+body {
+  height: 100%;
+  background-color: green;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: rgb(0,0,70);
+  background-image: url('../img/log.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+.form-signin .btn-block {
+    border-radius: 15px;
+  }
+
+.form-signin #inputEmail,
+.form-signin #inputPassword1,
+.form-signin #inputPassword2 {
+    direction: ltr;
+    height: 2.5em;
+    font-size: 1em;
+    color:black;
+}
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 0.5em;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 0.7em;
+}
+.form-signin {
+    /* padding: 15px; */
+    border: none;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .15);
+    border-top: 3px solid white;
+    overflow: hidden;
+  }
+.form-signin .form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgb(104, 145, 162);
+}
+.form-signin img {
+    justify-self: center;
+  }
+.form-signin .checkbox {
+    font-weight: 400;
+    color:darkblue;
+  }
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+.btn.btn-signin {
+    background-color: rgb(104, 0, 0);
+    padding: 0px;
+    color:white;
+    font-weight: 700;
+    font-size: 1em;
+    height: 5em;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 1em;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn.btn-signin:focus {
+    background-color: black;
+}
+.content {
+    width: 100%;
+    max-width: 310px;
+    margin: auto;
+  }
+.forgot-password {
+ 
+    color: rgb(0,0,0);
+}
+
+.forgot-password:hover,
+.forgot-password:active,
+.forgot-password:focus {
+    color: rgb(0,0,0);
+}
+
+.card {
+    background-color: white;
+    position: relative;
+    margin: 0 auto 2em;
+    height:370px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 1.5em;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  }
