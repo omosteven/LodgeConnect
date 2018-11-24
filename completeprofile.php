@@ -25,14 +25,7 @@ session_start();
 </head>
 
 <body>
-    <div class='header'>
-        <div class='logo'>
-            <img src="img/logo.jpg">
-        </div>
-        <div class="motto">
-            <label><marquee>Connect easily...</marquee></label>
-        </div>
-    </div>
+<?php include('headerlogo.html'); ?>
     <div class="aim" style="width:100%">
         <!-- <img src=""> -->
         <h3>Update Your Profile here...</h2>
@@ -155,4 +148,6 @@ session_start();
             };
         }());
     </script>
+<?php //include('footer.php'); ?>
 </body>
+</html>
