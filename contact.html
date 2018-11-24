@@ -8,9 +8,13 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css">
     <link rel="stylesheet" href="css/contact.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type='text/javascript' src='js/cookies.js'></script>
 </head>
 
 <body>
+    <script>
+     
+    </script>
     <div class="header">
         <div class="logo">
             <a href='index.php' title='Home'><img src="img/logo.jpg"></a>
@@ -24,6 +28,17 @@
         <h2>Contact Us</h2>
         <p>Know more about us</p>
     </div>
+    <div id='msg' class='msg'>Thanks, your Contact Message has been sent, we will get in touch with you within 24 hours, click on our logo above to go back to home</div>
+    <script>
+            if(checkCookie('contactresponse') == 1) {
+                var msg = checkCookie('contactresponse');
+                document.getElementById("msg").className = 'msg';
+                deleteCookie('contactresponse');
+            } else {
+                deleteCookie('contactresponse');
+                document.getElementById('msg').className='hide';
+            }
+        </script>
     <div class="textareaAndFeedback">
         <div class="textarea">
             <form action="contactfeedback.php" method="GET" name='contact'>
@@ -45,9 +60,9 @@
         <div class="FAQ">
             <h5>FAQs & NEEDS</h5>
             <p style="color:white">Must I be logged in to Contact LodgeConnect?...No</p>
-            <a href="feedback.html"><p style="color:white">How Can I send a Feedback to LodgeConnect?...Please Click on this link provided you're logged in</p></a>
-            <a href=""><p style="color:white">The Divi Builder is a visual drag & drop page builder for WordPress</p></a>
-            <a href="FAQs.html"><p style="color:white">Would you want to check out for more FAQs?...Please click on this link</p></a>
+            <a href="feedback.html"><p style="color:white" title='Send us a Feedback?'>How Can I send a Feedback to LodgeConnect?...Please Click on this link provided you're logged in</p></a>
+            <p style="color:white">How can I know my contact message has been sent?...you will see a message just above the fullname field</p>
+            <a href="FAQs.html"><p style="color:white" title="Check our Frequently Asked Questions">Would you want to check out for more FAQs?...Please click on this link</p></a>
         </div>
     </div>
     <div class="footer">
