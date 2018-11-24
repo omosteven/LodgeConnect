@@ -41,6 +41,10 @@
             font-family: "Lucida Console", monaco, monospace;
             width: 100%;
         }
+        .msg {
+            color:red;
+            margin-left:1em;
+        }
         /*mobile view for header*/
         
         @media screen and (max-width:600px) {
