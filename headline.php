@@ -1,20 +1,4 @@
-<?php
-session_start();
-include('checkstatus.php'); //to log out user when logged out in another browser
-//checkstatus();
-//include('inactiveness.php');
-?>
-<html>
-    <head>
-    <meta charset="utf-8" lang="EN-US">
-    <meta name="viewport" content="width=device-width" initial-scale= "1">
-    <link href="css/headline.css" rel="stylesheet">
-    
-        <style>
-    </style>
-    
-</head>
-<body>
+<link href="css/headline.css" rel="stylesheet"/>
 <div class = 'border'>
 <div><!--a href="home.php"><img src='img/home.jpeg' alt ='Home' style ='width:3em; height:3.2em; float:left;'/></a--></div>
 <div class="navbar">
@@ -27,12 +11,6 @@ Gbagada, Lagos, Nigeria, Victoria Island, Abuja</b></b>
 <button class='btn1'><a class='txt1' href='signup.html'>Register</a></button> 
 <button class='btn1'><?php if(isset($_SESSION['loggedEmail'])) { echo "<a href='signout.php' class='txt1'>Sign out</a>"; } else { echo "<a href='login.html' class='txt1'>Sign in</a>"; } ?></b></button>
 </div>
-
-    
-
 </div>
 </div>
-
-</div>
-</body>
-</html>
+<div>
