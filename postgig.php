@@ -6,7 +6,11 @@ if(include('lodgeconnectDB.php'))   { //To import the Database connection file
             header('location:uploadfile.php');
             }
             else {
-                header('location:login.html');
+                echo "<script type='text/javascript' src='js/cookies.js'></script>
+                <script>
+                setCookie('bypasslogin','no',1);
+                </script>";
+                header('refresh:0.1,url=login.html');
             }
         }
             else    {

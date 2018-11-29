@@ -71,7 +71,7 @@ session_start();
        <option value='1bed'>1 Bedroom</option>
        <option value='2bed'>2 Bedroom Flat</option>
        <option value='3bed'>3 Bedroom Flat</option>
-       <option value='self-con'>Self container</option>
+       <option value='self-con'>Self contain</option>
     </select>
     <select name ='subTypeService' id='service'>
         <option value='default'>Category</option>

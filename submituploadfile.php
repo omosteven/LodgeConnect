@@ -25,7 +25,7 @@ if(include('lodgeconnectDB.php'))   { //To import the Database connection file
                         <script>
                         setCookie('uploadresponse','upload',1);
                         </script>";
-                        header('refresh:2,url=uploadfile.php');
+                        header('refresh:0.1,url=uploadfile.php');
                     } else {
                         header('Location:pageerrorhandler.php');
                     } 
