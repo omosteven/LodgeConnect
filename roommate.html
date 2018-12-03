@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>LodgeConnect | Find Roommate</title>
+    <meta charset="UTF-8" lang="EN-US">
+    <link rel="shortcut icon" href="img/logo.jpg">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/roommate.css" id="styles">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="index.php"><img src="img/logo.jpg"></a>
+        </div>
+        <div class="motto">
+            <label>Connect easily...</label>
+        </div>
+    </div>
+    <div class="aim" style="width:100%">
+        <!-- <img src=""> -->
+        <h2>You need a roommate?</h2>
+        <p> Fill in the following fields </p>
+    </div>
+    <div class="form">
+        <!-- <img src="/img/roommate logo.png" alt="roommate logo" style="display: block;width: 200px;margin:auto;height: 200px"> -->
+        <form action="" method="POST">
+            <div class="input-field modify">
+                <input id="lodge_name" type="text" class="validate">
+                <label for="lodge_name">Lodge Name</label>
+            </div>
+            <div class="input-field modify">
+                <input id="lodge_address" type="text" class="validate">
+                <label for="lodge_address">Lodge Address</label>
+            </div>
+            <div class="input-field modify">
+                <input id="State" type="text" class="validate">
+                <label for="State">State</label>
+            </div>
+            <div class="input-field modify">
+                <input id="city" type="text" class="validate">
+                <label for="city">City</label>
+            </div>
+            <div class="input-field modify">
+                <select>
+                    <option value="" disabled selected>Lodge Size</option>
+                    <option value="1">Flat</option>
+                    <option value="2">Self Contain</option>
+                    <option value="3">A Room</option>
+                </select>
+            </div>
+            <div class="input-field modify">
+                <input id="validity_period" type="text" class="validate">
+                <label for="validity_period">Validity Period</label>
+            </div>
+            <div class="input-field modify">
+                <input id="Contact" type="text" class="validate">
+                <label for="Contact">Contact</label>
+            </div>
+            <div class="input-field modify">
+                <input id="Contact" type="text" class="validate">
+                <label for="Contact">Contact</label>
+            </div>
+            <div class="input-field modify" style="margin-top:0;">
+                <textarea id="" class="materialize-textarea"></textarea>
+                <label for="textarea1">Self Description</label>
+            </div>
+            <div class="input-field modify" style="margin-top:0;">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Description of who you are interested in</label>
+            </div>
+            <div class="input-field submit">
+                <input type="submit" value="Upload" name="">
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <h5 id="copyright">&copyLodgeConnect </h5>
+        <div class="icons">
+            <a href=""><img src="img/facebook.png"></a>
+            <a href=""><img src="img/instagram.png"></a>
+            <a href=""><img src="img/google.png"></a>
+            <a href=""><img src="img/twitter.png"></a>
+        </div>
+    </div>
+
+    <script>
+        // appending the year to &copy lodgeCOnnect
+        var copyright = document.getElementById('copyright');
+        var year = new Date().getFullYear();
+        copyright.innerHTML += year;
+    </script>
+    <!--js script for form live-->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!-- --------------------- -->
+    <script>
+        //for select option .. it is a plugin
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    </script>
+    <script>
+        //not to apply any style sheet for a smaller screen
+        // //153
+        // (function(){
+        //     if (window.innerWidth <= 153){document.getElementById('styles').rel = '';}
+        // })();
+    </script>
+</body>
