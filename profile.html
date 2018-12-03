@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>LodgeConnect- Update Profile</title>
+    <title>LodgeConnect | Profile Update</title>
     <meta charset="UTF-8" lang="EN-US">
     <link rel="shortcut icon" href="img/logo.jpg">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css">
@@ -12,10 +12,6 @@
         function script() {
             var variable = document.getElementById('block');
             variable.style.display = "block";
-            var variable = document.getElementById('block1');
-            variable.style.display = "block1";
-            var variable = document.getElementById('block2');
-            variable.style.display = "block2";
         }
     </script>
 </head>
@@ -23,88 +19,128 @@
 <body>
     <div class="header">
         <div class="logo">
-            <img src="img/logo.jpg">
+            <a href="index.php"><img src="img/logo.jpg"></a>
         </div>
         <div class="motto">
-            <label><marquee>Connect easily...</marquee></label>
+            <label>Connect easily...</label>
         </div>
     </div>
     <div class="aim" style="width:100%">
         <!-- <img src=""> -->
-        <h3>Update Your Profile here...</h2>
-        <p> Let us know You</p>
+        <h2>Update Your Profile</h2>
+        <p> Let people know You</p>
     </div>
     <div class="form">
-        <form action="" method="GET">
+        <form action="" method="POST">
             <div class="input-field modify">
-                <input id="first_name" type="text" class="validate" required>
+                <input id="first_name" type="text" class="validate">
                 <label for="first_name">First Name</label>
             </div>
-    
             <div class="input-field modify">
-                <input id="last_name" type="text" name=lastName' class="validate" required>
+                <input id="middle_name" type="text" class="validate">
+                <label for="first_name">Middle Name</label>
+            </div>
+            <div class="input-field modify">
+                <input id="last_name" type="text" class="validate">
                 <label for="last_name">Last Name</label>
             </div>
             <div class="input-field modify">
-                <input id="state" type="text" name='stateOfOrigin' class="validate" required>
+                <input id="state" type="text" class="validate">
                 <label for="State">State Of Origin</label>
             </div>
             <div class="input-field modify">
-                <input id="hometown" type="text" name='hometown' class="validate" required>
+                <input id="hometown" type="text" class="validate">
                 <label for="hometown">Hometown</label>
             </div>
             <div class="input-field modify">
-                <input id="contact" type="text" name='contact' class="validate" placeholder="eg +2347037048119" required>
-                <label for="contact">Telephone</label>
+                <input id="contact" type="text" class="validate">
+                <label for="contact">Contact</label>
             </div>
             <div class="input-field modify">
-                    <input id="business_name" type="text" class="validate" placeholder="Not Necessary">
-                    <label for="business_name">Business Name</label>
-                </div>
-            <div class="input-field modify">
-                <select class="waves-effect waves-light btn" id="jsdone" name ='occupation' style="background-color:white;color:RGB(0,0,70);" required>
+                <select class="waves-effect waves-light btn" style="background-color:cornsilk;color:rgb(0,0,70)" id="jsdone">
                       <option value="" disabled selected>Choose your occupation</option>
-                      <option value="Employed">Employed</option>
-                      <option value="Unemployed">Unemployed</option>
-                      <option value="Self-Employed">Self-Employed</option>
-                      <option value="Student">Student</option>
+                      <option value="1">Employed</option>
+                      <option value="2">Unemployed</option>
+                      <option value="3">Self Employed</option>
+                      <option value="4">Student</option>
                 </select>
                 <!-- <label>Materialize Select</label> -->
             </div>
             <div class="input-field modify" id="block">
-                <input id="nameOfInstitution" type="text" class="validate" name='nameOfInst' required>
+                <input id="nameOfInstitution" type="text" class="validate">
                 <label for="nameOfInstitution">Name of Institution</label>
             </div>
-            <div class="input-field modify" id="block1">
-                    <input id="nameOfWork" type="text" class="validate" name='nameOfOrg' required>
-                    <label for="nameOfWork">Name of Organization/Company</label>
-            </div>
-            <div class="input-field modify" id="block2">
-                        <input id="nameOfJob" type="text" class="validate" name='nameOfJob'required>
-                        <label for="nameOfJob">What self Job do you do?</label>
-            </div>
             <div class="input-field modify">
-                <select class="waves-effect waves-light btn" style="background-color:white;color:RGB(0,0,70);" required>
-                <option value="" disabled selected>We can recognize you as?</option>
-                <option value="Agent">Agent</option>
-                <option value="Caretaker">Caretaker</option>
-                <option value="Landlord">Landlord</option>
-                <option value="Buyer">Buyer</option>
-                <option value="Neutral">Neutral</option>
+                <select class="waves-effect waves-light btn" style="background-color:cornsilk;color:rgb(0,0,70)">
+                <option value="" disabled selected>LodgeConnect Personality</option>
+                <option value="1">Agent</option>
+                <option value="2">Caretaker</option>
+                <option value="3">Landlord</option>
+                <option value="3">Buyer</option>
+                <option value="3">Neutral</option>
                 </select>
             </div>
 
             <div class="input-field modify">
-                <select class="waves-effect waves-light btn" style="background-color:white;color:RGB(0,0,70);" required>
+                <select class="waves-effect waves-light btn" style="background-color:cornsilk;color:rgb(0,0,70)">
                         <option value="" disabled selected>Choose your gender</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
                     </select>
+            </div>
+            <div class="modify file-field">
+                <div class="btn" style="background-color:cornsilk;color:rgb(0,0,70)">
+                    <span>Upload picture</span>
+                    <input type="file">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
             </div>
             <input id="submit" type="submit" value="Update Profile">
         </form>
     </div>
-    
+    <div class="footer">
+        <div class="instr">
+            <h5>About</h5>
+            The Divi Builder is a visual drag & drop page builder for WordPress that works with any theme. The Divi Builder plugin takes the visual page builder technology that made our Divi theme such a success, and packages it as a stand-alone plugin that you can
+            use with any theme. Build anything, customize everything, and do it all using an intuitive visual design interface. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet auctor nisi. Ut hendrerit interdum metus,Build
+            anything, customize everything, and do it all using an intuitive visual design interface. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet auctor nisi. Ut hendrerit interdum metus,
+        </div>
+
+        <div class="socials">
+            <h5>Follow Us..</h5>
+            <div class="grid">
+                <a href=""><img src="img/facebook.png"></a>
+            </div>
+            <div class="grid">
+                <a href=""><img src="img/twitter.png"> </a>
+            </div>
+            <div class="grid">
+                <a href=""><img src="img/instagram.png"></a>
+            </div>
+            <div class="grid">
+                <a href=""><img src="img/google.png"></a>
+            </div>
+        </div>
+        <div class="info">
+            <h5>More Of Us</h5>
+            <div class="gridfirst">
+                <img src="img/location.png">
+                <p>
+                    Virtual Location...
+                </p>
+            </div>
+            <div class="gridfirst">
+                <img src="img/contact.png">
+                <p>+2348099876654</p>
+            </div>
+            <div class="gridfirst">
+                <img src="img/email.png">
+                <p><a href="contact.html">LodgeConnect@contact</a></p>
+            </div>
+        </div>
+    </div>
     <!-- Compulsory js -->
     <script>
         $(document).ready(function() {
@@ -119,33 +155,14 @@
         (function() {
             'use strict';
             var nameOfInstitution = document.getElementById('block');
-            var nameOfWork = document.getElementById('block1');
-            var nameOfJob = document.getElementById('block2');
             var caller = document.getElementById('jsdone');
             nameOfInstitution.className = 'hide';
-            nameOfWork.className = 'hide';
-            nameOfJob.className = 'hide';
             caller.onchange = function() {
-                if (this.value == 'Student') {
+                if (this.value == '4') {
                     nameOfInstitution.className = "input-field modify";
-                    nameOfWork.className = 'hide';
-                    nameOfJob.className = 'hide';
-                } else if(this.value == 'Employed'){
-                    nameOfWork.className = "input-field modify";
-                    nameOfInstitution.className = 'hide';
-                    nameOfJob.className = 'hide';
-                } else if(this.value == 'Self-Employed'){
-                    nameOfJob.className = "input-field modify";
-                    nameOfInstitution.className = 'hide';
-                    nameOfWork.className = 'hide';
-                }
-                else {
+                } else {
                     nameOfInstitution.className = "hide";
-                    nameOfWork.className = 'hide';
-                    nameOfWork.className = 'hide';
                 }
-                
-                
             };
         }());
     </script>
