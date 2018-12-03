@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+<head>
+        
+    <title>LodgeConnect | Save Card</title>
+    <meta charset="UTF-8" lang="EN-US">
+    <link rel="shortcut icon" href="img/logo.jpg">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/savecarddetails.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    
+    <div class="container">
+        <img src="img/logo.jpg" alt="lodgeConnect logo">
+        <form action="" method="POST">
+            <div class="input-field completeWidth">
+                <input id="card_name" type="text" class="validate">
+                <label for="card_name">Name on card</label>
+            </div>
+            <div class="input-field completeWidth">
+                <input id="card_number" type="number" class="validate">
+                <label for="card_number">Card Number</label>
+            </div>
+            <div class="input-field halfWidth">
+                <input id="expiry_date" type="text" value="" class="datepicker" >
+                <label for="expiry_date">Expiry Date</label>
+            </div>
+            <div class="input-field halfWidth" style="float:right">
+                <input id="csv" type="password" class="validate">
+                <label for="csv">CVV?</label>
+            </div>
+            <div class="input-field halfWidth" id="hidediv">
+                <input id="otp" type="password">
+                <label for="otp">OTP?</label>
+            </div>
+            <div class="button">
+                <a onclick="openOTP()" href="#"> Authenthicate </a>
+                <a href="#"> Save </a>
+            </div>
+            
+        </form>
+    </div>
+    <script>
+        //to hide otp until autenticate is done
+        {
+            var otp = document.getElementById('hidediv');
+            otp.style.display = 'none';
+            function openOTP(){
+                otp.style.display = 'block';
+            }
+        }
+    </script>
+    <!--js script for form live-->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        //this script is the initialization of the datepicker section
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15, // Creates a dropdown of 15 years to control year,
+            today: 'Today',
+            clear: 'Clear',
+            close: 'Ok',
+            closeOnSelect: false // Close upon selecting a date,
+        });
+    </script>
+</body>
+</html>

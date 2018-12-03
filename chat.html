@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta lang="en-US">
+    <link rel="shortcut icon" href="img/logo.jpg">
+    <style>
+        a{
+            text-decoration: none;
+        }
+        body .all{
+            width:40%;
+            margin:auto;
+            background-color:aquamarine;
+            position: absolute;
+            height: 100%;
+            padding: 2em;
+        }
+        body .all .receiver{
+            float:left;
+            clear:both;
+            width:50%;
+            border-style: dotted;
+            border-radius: 25px;
+            height:50px;
+            margin-bottom: 1em;
+        }
+        body .all .sender{
+            float:right;
+            clear:both;
+            position: relative;
+            width:50%;
+            border-style: dotted;
+            border-radius: 25px;
+            height:50px;
+            margin-top:1em;
+        }
+        body .all .dialogue{
+            float:right;
+            clear:both;
+            width:80%;
+            height:30px;
+            margin-top:1em;
+            margin-right: 3em;
+        }
+        .dialogue input{
+            outline: none;
+            width:80%;
+            height:3em;
+            float:left;
+        }
+        .dialogue a{
+            display: block;
+            float:left;
+            padding:0.8em;
+            background-color: rgb(0,0,70);
+            color:cornsilk;
+            text-align: center;
+            width:50px
+        }
+        .sender .icons{
+            position: absolute;
+            top:12px;
+            right: 0;
+            width:40px;
+            height: 100%;
+        }
+        .sender .icons .dropdown{
+            position: relative;
+            width:100%;
+            height: 100%;
+        }
+        .sender .icons .dropdown a{
+            width:100%;
+            display:block;
+            clear:both
+        }
+        .icons .dropdown .dropdownContent{
+            display: none;
+        }
+        .icons .dropdown .dropdownContent a{
+            width:100%;
+            padding:1em;
+            background-color: rgb(0,0,70);
+            color:cornsilk;
+        }
+        .dropdown:hover .dropdownContent{
+            display: block;
+            position: absolute;
+            width: 100%;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="receiver">
+
+        </div>
+        <div class="sender">
+            <div class="icons">
+                <div class="dropdown">
+                    <a href="#">❯</a>
+                    <div class="dropdownContent">
+                        <a href="">Forward</a>
+                        <a href="">delete</a>
+                        <a href="">reply</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="dialogue">
+            <input type="text" name="activeMessage" value="">
+            <a href="">❯</a>
+        </div>
+    </div>
+</body>
