@@ -6,19 +6,19 @@
     <meta charset="UTF-8" lang="EN-US">
     <link rel="shortcut icon" href="img/logo.jpg">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css">
-    <link rel="stylesheet" href="css/roommate.css" id="styles">
+    <link rel="stylesheet" href="css/roommate.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
     <div class="header">
         <div class="logo">
-            <a href="index.php"><img src="img/logo.jpg"></a>
+            <a href="index.html"><img src="img/logo.jpg" id="image"></a>
         </div>
         <div class="motto">
             <label>Connect easily...</label>
         </div>
     </div>
-    <div class="aim" style="width:100%">
+    <div class="aim" style="width:100%" id="aim">
         <!-- <img src=""> -->
         <h2>You need a roommate?</h2>
         <p> Fill in the following fields </p>
@@ -27,12 +27,32 @@
         <!-- <img src="/img/roommate logo.png" alt="roommate logo" style="display: block;width: 200px;margin:auto;height: 200px"> -->
         <form action="" method="POST">
             <div class="input-field modify">
+                <select id="lodgeAvailabe" onchange="showNameClass()">
+                    <option value="" disabled selected>Do you have a lodge</option>
+                    <option value="1">YES </option>
+                    <option value="2"> NO</option>
+                </select>
+            </div>
+            <div class="input-field modify hideTemp">
                 <input id="lodge_name" type="text" class="validate">
                 <label for="lodge_name">Lodge Name</label>
             </div>
-            <div class="input-field modify">
+            <div class="input-field modify hideTemp">
                 <input id="lodge_address" type="text" class="validate">
                 <label for="lodge_address">Lodge Address</label>
+            </div>
+            <div class="file-field input-field hideTemp modify">
+                <div class="btn">
+                  <span>Upload Pictures</span>
+                  <input type="file" multiple id="noPic">
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text" placeholder="Upload not more than 4 pics of the lodge">
+                </div>
+            </div>
+            <div class="input-field modify hideTemp">
+                <input id="no_roommate" type="number" class="validate" max="5" min="1">
+                <label for="no_roommate" data-error="Maximum of 5 and minimum of 1 roommate(s)">No of Roommate</label>
             </div>
             <div class="input-field modify">
                 <input id="State" type="text" class="validate">
@@ -43,7 +63,7 @@
                 <label for="city">City</label>
             </div>
             <div class="input-field modify">
-                <select>
+                <select id="lodgeSize">
                     <option value="" disabled selected>Lodge Size</option>
                     <option value="1">Flat</option>
                     <option value="2">Self Contain</option>
@@ -58,10 +78,6 @@
                 <input id="Contact" type="text" class="validate">
                 <label for="Contact">Contact</label>
             </div>
-            <div class="input-field modify">
-                <input id="Contact" type="text" class="validate">
-                <label for="Contact">Contact</label>
-            </div>
             <div class="input-field modify" style="margin-top:0;">
                 <textarea id="" class="materialize-textarea"></textarea>
                 <label for="textarea1">Self Description</label>
@@ -70,7 +86,7 @@
                 <textarea id="textarea1" class="materialize-textarea"></textarea>
                 <label for="textarea1">Description of who you are interested in</label>
             </div>
-            <div class="input-field submit">
+            <div class="submit">
                 <input type="submit" value="Upload" name="">
             </div>
         </form>
@@ -84,7 +100,6 @@
             <a href=""><img src="img/twitter.png"></a>
         </div>
     </div>
-
     <script>
         // appending the year to &copy lodgeCOnnect
         var copyright = document.getElementById('copyright');
@@ -101,11 +116,25 @@
             $('select').material_select();
         });
     </script>
+    <!-- to hide lodge address or lodge name except the user got a lodge -->
     <script>
-        //not to apply any style sheet for a smaller screen
-        // //153
-        // (function(){
-        //     if (window.innerWidth <= 153){document.getElementById('styles').rel = '';}
-        // })();
+        var nameClass = document.getElementsByClassName("hideTemp");
+        for(var i = 0;i <3;i++){
+            nameClass[i].style.display = 'none';
+        }
+        function showNameClass(){
+            var lodgeYes = document.getElementById('lodgeAvailabe');
+            if (lodgeYes.value == '1'){
+                for(var i = 0;i <3;i++){
+                    nameClass[i].style.display = 'block';
+                }
+            }
+            else{
+                for(var i = 0;i <3;i++){
+                    nameClass[i].style.display = 'none';
+                }
+            }
+            
+        }
     </script>
 </body>
