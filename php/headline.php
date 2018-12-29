@@ -937,11 +937,13 @@
             function displayPrivate(){
                 if (counter % 2 == 0){
                     dropdownContent.style.display = "block";
+                    document.getElementById('iconLib1').className = "fa fa-window-close";
                 }
                 else{
                     $(document).ready(function(){
                         $(dropdownContent).fadeOut("slow");
                     });
+                    document.getElementById('iconLib1').className = "fa fa-bars";
                 }
                 counter++;
             }
@@ -959,12 +961,16 @@
                     others_hide[counterRelease].style.float = "none";
                     others_hide[counterRelease].style.clear = "both";
                     others_hide[counterRelease].style.width = "100%";
+                    others_hide[counterRelease].style.opacity = "0.9";
+                    others_hide[counterRelease].style.color = "rgba(255, 248, 220)";
                 }
+                document.getElementById('iconLib').className = "fa fa-window-close";
             }
             else{
                 for(var counterRelease = 0; counterRelease<4; counterRelease++){
                     others_hide[counterRelease].style.display = "none";
                 }
+                document.getElementById('iconLib').className = "fa fa-bars";
             }
             openClose++;
         }
