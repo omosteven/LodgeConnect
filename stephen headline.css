@@ -102,6 +102,11 @@ div.sticky{
     box-shadow: 3px 3px 3px black;
 }
 /* mobile view for nav-bar starts */
+@media screen and (min-width:653px){
+    .nav-bar .other-contents .others-hide{
+        display:block;
+    }
+}
 @media screen and (max-width:652px){
     div.nav-bar .dropdownContent{
         height: 100%;
