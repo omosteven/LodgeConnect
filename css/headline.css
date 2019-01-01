@@ -1,6 +1,15 @@
+/* Add a black background color to the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: white;
+}
+
+* {
+  box-sizing: border-box;
+}  
 body{
-  width:100%;
-  height:100%;
+  height: 100%;
+  padding: 0;
   margin: 0;
   text-decoration:none;
   background-size:100% 100%;
@@ -14,14 +23,27 @@ body{
   z-index: -1
   /*linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
 }
-.border {
-    color: rgb(0,0,70);
-    background-color: rgb(0,0,70);
-    width: 100%;
-    height:auto;
-    margin-top:-0.5em;
-    border: 5px thin rgb(0,0,70);
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+    float: left;
+    color:yellow;
+    padding: 1px;
+    border: none;
+    margin-top: auto;
+    margin-left:1em;
+    margin-right: 0em;
+    font-size: 1.2em;
     
+}
+
+
+.border {
+    color: RGB(0,0,70);
+    background-color: RGB(0,0,70);
+    width: 100%;
+    border: 5px solid RGB(0,0,70);
+    float: left;
 }
 a {
     text-decoration:none;
@@ -30,17 +52,17 @@ a {
 /* Navbar container */
 .navbar {
   overflow: hidden;
-  background-color: rgb(0,0,70); /*#333*/
+  background-color: RGB(0,0,70); /*#333*/
   font-family: Arial;
 }
 
-/* The dropdown container *
+/* The dropdown container */
 .dropdown {
   float: left;
   overflow: hidden;
 }
 
-/* Dropdown button *
+/* Dropdown button */
 .dropdown .dropbtn {
   font-size: 16px; 
   border: none;
@@ -48,8 +70,8 @@ a {
   color: white;
   padding: 14px 16px;
   background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones *
-  margin: 0; /* Important for vertical align on mobile phones *
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
 }
 .dropdown .dropbtn {
     font-size: 16px; 
@@ -58,8 +80,8 @@ a {
     color: white;
     padding: 14px 16px;
     background-color: inherit;
-    font-family: inherit; * Important for vertical align on mobile phones *
-    margin: 0; /* Important for vertical align on mobile phones *
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
   }
   
 
@@ -71,8 +93,8 @@ a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-}*
-.navbar i{
+}*/
+.navbar i {
   float: left;
   font-size: 16px;
   color: white;
@@ -89,11 +111,11 @@ a {
 /* Add a red background color to navbar links on hover */
 /*.navbar a:hover, .dropdown:hover .dropbtn {
   background-color: darkred;
-}*
+}*/
 .navbar i:hover, .dropdown:hover .dropbtn {
   background-color: darkred;
 }
-/* Dropdown content (hidden by default) *
+/* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -113,7 +135,7 @@ a {
   text-decoration: none;
   display: block;
   text-align: left;
-}*
+}*/
 .dropdown-content i {
   float: none;
   color: white;
@@ -129,21 +151,23 @@ a {
 /* Add a grey background color to dropdown links on hover */
 /*.dropdown-content a:hover {
   background-color: red;
-}*
+}*/
 .dropdown-content i:hover {
   background-color: red;
 }
 
-/* Show the dropdown menu on hover *
+/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
-*/
 
-.btn1{
+
+
+
+.btn.btn-signin {
   background-color: white;
-  
-  color: green;
+  padding: 0px;
+  color: black;
   font-size: 0.8em;
   height: 2.5em;
   margin-left:1em;
@@ -156,241 +180,179 @@ a {
   -webkit-transition: all 0.218s;
   transition: all 0.218s;
 }
-
-.btn1:hover,
-.btn1:active,
-.btn1:focus {
-  background-color: rgb(255,0,0);
+.txt {
+    font-size:1em;
+    margin-left:1em;
+    margin-right:1em;
+    color:black;
+    font-weight: bold;
 }
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn.btn-signin:focus {
+  background-color: rgb(0,255,0);
+}
+.txt:hover,
+.txt:active,
+.txt:focus{
+  color:red;
+}
+/*.img-pro {
+  color:white;
+  background-color:rgb(0,0,70);
+}
+img {
+  -webkit-filter:invert(100%);
+   /* invert(100%),opacity(80%)filter: invert(100%);
+  filter:invert(100%);
+  color:white;
 
-.headline {
+}
+img.backgroud {
+  -webkit-filter:invert(100%);
+  /* invert(100%),opacity(80%)filter: invert(100%);
+ filter:invert(100%);
+
+}
+*/
+.header .logo {
+  padding: 0;
+  padding-top: 1em;
+  padding-left: 1em;
+  float: left;
+  height: 100px;
+  margin-bottom: 1em;
+  width:2em;
+}
+.head {
   float:right; 
   margin-right:1em;
   position: relative; 
-  margin-top:1.7em;
-  margin-bottom:0em;
+  margin-top:1.5em;
 }
-.head-line {
-  float:left; 
-  margin-left:0.5em;
-  position: relative; 
+.loc  {
+  color:white;
   margin-top:0.5em;
-  margin-bottom:0em;
+  font-size:1em;
 }
-.txt1 {
+.head1 { 
+  float:left;
   font-size:1em;
   margin-left:1em;
-  margin-right:1em;
-  color:darkgreen;
-  font-weight: bold;
+  position: relative; 
+  margin-top:1em;
 }
-.txt1:hover,
-.txt1:active,
-.txt1:focus{
-color:white;
+@media screen and (max-width:1080px) {
+.head1 { 
+  float:left;
+  font-size:1em;
+  margin-left:3em;
+  position: relative; 
+  margin-top:1em;
+}
+}
+@media screen and (max-width:720px) {
+.head1 {
+  float:left; 
+  margin-left:1em;
+  font-size:0.9em;
+  position: relative; 
+  margin-top:1em;
+}
+}
+@media screen and (max-width:360px){
+.head1 {
+  float:left; 
+  margin-left:1em;
+  font-size:0.7em;
+  position: relative; 
+  margin-top:1em;
+}
 }
 
-.locsize {
-  color:white; 
+.loc {
+  color:white;
   margin-top:0.5em;
   font-size:1em;
 }
-
-.resize {
-  color:white;
-  margin-left:0em;
-  font-size:1em;
+.logo {
+  width:8em; 
+  float:left; 
+  padding:0em; 
+  margin-bottom:0em;
+  height:8em;
 }
-.namesize {
-  color:white; 
-  font-size:1em;
-}
-.mark {
-  width:2.5em; height:2.5em;
-  -webkit-filter:invert(100%);
-  filter:invert(100%);
-  background-color: ;
-}
-@media screen and (max-width:720px){
-    .txt1 {
-      font-size:1em;
-      margin-left:0.5em;
-      margin-right:.5em;
-      color:darkgreen;
-      font-weight: bold;
-    }
-    .btn1{
-      background-color: white;
-      color: green;
-      font-size: 0.8em;
-      height: 2em;
-      margin-left:0.5em;
-      -moz-border-radius: 3px;
-      -webkit-border-radius: 3px;
-      border-radius: 0.5em;
-      border: none;
-      -o-transition: all 0.218s;
-      -moz-transition: all 0.218s;
-      -webkit-transition: all 0.218s;
-      transition: all 0.218s;
-    }
-    .locsize {
-      color:white; 
-      margin-top:0.5em;
-      font-size:0.9em;
-    }
-    .box {
-      max-width:50%;
-    }
-    .namesize {
-      color:white; 
-      font-size:1em;
-    }
-    .headline {
+@media screen and (max-width:1080px) {
+  .head { 
+    float:right;
+    font-size:1em;
+    margin-right:3em;
+    position: relative; 
+    margin-top:1em;
+  }
+  .loc {
+    color:white;
+    margin-top:0.5em;
+    font-size:0.9em;
+  }
+  .logo {
+    width:7em; 
+    float:left; 
+    padding:0em; 
+    margin-bottom:0em;
+    height:7em;
+  }
+  }
+  @media screen and (max-width:720px) {
+    .head {
       float:right; 
       margin-right:0.5em;
-      position: relative; 
-      margin-top:2em;
-      margin-bottom:0em;
-    }
-    .head-line {
-      float:left; 
-      max-width:70%;
-      margin-left:0em;
-      position: relative; 
-      margin-top:0.5em;
-      margin-bottom:0em;
-    }
-    .mark {
-      width:2em; height:2em;
-      -webkit-filter:invert(100%);
-      filter:invert(100%);
-      background-color: ;
-    }
-
-  }
-
-@media screen and (max-width:540px){
-    .txt1 {
-      font-size:1em;
-      margin-left:0.5em;
-      margin-right:.5em;
-      color:darkgreen;
-      font-weight: bold;
-    }
-    .btn1{
-      background-color: white;
-      color: green;
-      font-size: 0.8em;
-      height: 2em;
-      margin-left:0.5em;
-      -moz-border-radius: 3px;
-      -webkit-border-radius: 3px;
-      border-radius: 0.5em;
-      border: none;
-      -o-transition: all 0.218s;
-      -moz-transition: all 0.218s;
-      -webkit-transition: all 0.218s;
-      transition: all 0.218s;
-    }
-    .locsize {
-      color:white; 
-      margin-top:0.5em;
       font-size:0.8em;
-    }
-    .box {
-      max-width:50%;
-    }
-    .namesize {
-      color:white; 
-      font-size:0.9em;
-    }
-    .headline {
-      float:right; 
-      margin-right:0.5em;
       position: relative; 
-      margin-top:2em;
-      margin-bottom:0em;
+      margin-top:1em;
     }
-    .head-line {
-      float:left; 
-      max-width:50%;
-      margin-left:0em;
-      position: relative; 
-      margin-top:0.5em;
-      margin-bottom:0em;
-    }
-    .mark {
-      width:1.8em; height:1.8em;
-      -webkit-filter:invert(100%);
-      filter:invert(100%);
-      background-color: ;
-    }
-
-  }
-
-  @media screen and (max-width:360px){
-    .txt1 {
-      font-size:0.8em;
-      margin-left:0.5em;
-      margin-right:.5em;
-      color:darkgreen;
-      font-weight: bold;
-    }
-    .btn1{
-      background-color: white;
-      color: green;
-      font-size: 0.8em;
-      height: 2em;
-      margin-left:0.5em;
-      -moz-border-radius: 3px;
-      -webkit-border-radius: 3px;
-      border-radius: 0.5em;
-      border: none;
-      -o-transition: all 0.218s;
-      -moz-transition: all 0.218s;
-      -webkit-transition: all 0.218s;
-      transition: all 0.218s;
-    }
-    .locsize {
-      color:white; 
-      margin-top:0.5em;
-      font-size:0.8em;
-    }
-    .box {
-      max-width:50%;
-    }
-    .resize {
+    .loc {
       color:white;
-      margin-left:2em;
-      font-size:0.8em;
+      margin-top:0.5em;
+      font-size:1em;
     }
-    .namesize {
-      color:white; 
-      font-size:0.8em;
-    }
-    .headline {
-      float:right; 
-      margin-right:0.5em;
-      position: relative; 
-      margin-top:2em;
-      margin-bottom:0em;
-    }
-    .head-line {
+    .logo {
+      width:7em; 
       float:left; 
-      max-width:50%;
-      margin-left:0em;
-      position: relative; 
-      margin-top:0em;
+      padding:0em; 
       margin-bottom:0em;
+      height:7em;
     }
-    .mark {
-      width:1.5em; height:1.5em;
-      -webkit-filter:invert(100%);
-      filter:invert(100%);
-      background-color: ;
     }
-
+  @media screen and (max-width:540px){
+    .loc {
+      color:white;
+      margin-top:0.5em;
+      font-size:0.7em;
+    }
+    .logo {
+      width:5.5em; 
+      float:left; 
+      padding:0em; 
+      margin-bottom:0em;
+      height:6em;
+    }
+  }
+ 
+  @media screen and (max-width:360px){
+  .head {
+    float:right; 
+    margin-right:0em;
+    font-size:1em;
+    position: relative; 
+    margin-top:1em;
+  }
+  .loc {
+    color:white;
+    margin-top:0.5em;
+    font-size:0.7em;
+  }
   }
 
 
+.mark {width:2em; height:2em;}
